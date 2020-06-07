@@ -1,5 +1,7 @@
 {
   "name": "Crud-Ionic-SQLite",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
