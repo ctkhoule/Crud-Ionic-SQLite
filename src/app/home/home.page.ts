@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {SQLite, SQLiteObject} from "@ionic-native/sqlite";
+import {SQLite, SQLiteObject} from "@ionic-native/sqlite/ngx";
 import {Platform} from "@ionic/angular";
 
 @Component({
@@ -14,7 +14,7 @@ export class HomePage {
   readonly database_name: string = "freaky_database.db";
   readonly table_name: string = "myfreakytable";
 
-  name_modl: string = "";
+  name_model: string = "";
   row_data: any = [];
 
   //Operation de MAJ

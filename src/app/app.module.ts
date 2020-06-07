@@ -8,7 +8,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-/*Importer SQLite*/
+//Importer SQLite
 import { SQLite } from '@ionic-native/sqlite/ngx';
 
 @NgModule({
