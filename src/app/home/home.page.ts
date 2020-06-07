@@ -23,6 +23,26 @@ export class HomePage {
   to_update_item:any;
 
   constructor(private platform: Platform, private sqlite: SQLite) {
+    this.platform.ready().then(() => {
+      this.createDB();
+    }).catch(error => {
+      console.log(error);
+    })
+
+    // Create DB if not there
+    createDB() {
+      this.sqlite.create({
+        name: this.database_name,
+        location: 'default'
+      })
+          .then((db: SQLiteObject) => {
+            this.databaseObj = db;
+            alert('freaky_datatable Database Created!');
+          })
+          .catch(e => {
+            alert("error " + JSON.stringify(e))
+          });
+    }
 
   }
 
